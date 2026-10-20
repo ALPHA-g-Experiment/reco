@@ -51,7 +51,7 @@ version = "0.1.0"
 dependencies = [
  "alpha-g-analysis",
  "alpha_g_detector 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "alpha_g_physics 0.1.5",
+ "alpha_g_physics 0.1.5 (git+https://github.com/ALPHA-g-Experiment/alpha-g.git)",
  "anyhow",
  "clap",
  "csv",
@@ -61,17 +61,6 @@ dependencies = [
  "serde",
  "tch",
  "uom",
-]
-
-[[package]]
-name = "alpha_g_detector"
-version = "0.5.1"
-dependencies = [
- "crc32c",
- "lazy_static",
- "serde",
- "thiserror",
- "winnow",
 ]
 
 [[package]]
@@ -88,10 +77,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "alpha_g_detector"
+version = "0.5.1"
+source = "git+https://github.com/ALPHA-g-Experiment/alpha-g.git#532359522c25bac4afbe2116c51e20fddafd9e13"
+dependencies = [
+ "crc32c",
+ "lazy_static",
+ "serde",
+ "thiserror",
+ "winnow",
+]
+
+[[package]]
 name = "alpha_g_physics"
 version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "39b5ee6ba90f7e35cc9cb10fa6d1120b1b2e7dad0f92f26c4bf3d2928cdd0e97"
 dependencies = [
- "alpha_g_detector 0.5.1",
+ "alpha_g_detector 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "argmin",
  "argmin-math",
  "dyn-stack",
@@ -111,10 +114,9 @@ dependencies = [
 [[package]]
 name = "alpha_g_physics"
 version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39b5ee6ba90f7e35cc9cb10fa6d1120b1b2e7dad0f92f26c4bf3d2928cdd0e97"
+source = "git+https://github.com/ALPHA-g-Experiment/alpha-g.git#532359522c25bac4afbe2116c51e20fddafd9e13"
 dependencies = [
- "alpha_g_detector 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "alpha_g_detector 0.5.1 (git+https://github.com/ALPHA-g-Experiment/alpha-g.git)",
  "argmin",
  "argmin-math",
  "dyn-stack",

@@ -6,7 +6,7 @@ edition = "2024"
 [dependencies]
 alpha-g-analysis = "0.5.9"
 alpha_g_detector = "0.5.1"
-alpha_g_physics = { path = "/home/daniel/Projects/alpha-g/physics" }
+alpha_g_physics = { git = "https://github.com/ALPHA-g-Experiment/alpha-g.git" }
 anyhow = "1.0.98"
 clap = { version = "4.5.37", features = ["derive"] }
 csv = "1.3.1"
